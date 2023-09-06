@@ -1,5 +1,7 @@
 import numpy as np
 
+player = 1
+
 class TicTacToe:
     def __init__(self):
         self.row_count = 3
