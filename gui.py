@@ -9,6 +9,10 @@ screen_x = 150
 screen_y = 150
 screen = pygame.display.set_mode((screen_x, screen_y))
 
+icon_img = pygame.image.load("./assests/images/icon.jpg")
+pygame.display.set_caption("TicTacToe")
+pygame.display.set_icon(icon_img)
+
 white_img = pygame.image.load("./assests/images/white.png")
 white_img = pygame.transform.scale(white_img,(40,40))
 black_img = pygame.image.load("./assests/images/black.png")
