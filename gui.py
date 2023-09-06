@@ -17,7 +17,8 @@ black_won_img = pygame.image.load("./assests/images/black_won.png")
 black_won_img = pygame.transform.scale(black_won_img,(120,17))
 white_won_img = pygame.image.load("./assests/images/white_won.png")
 white_won_img = pygame.transform.scale(white_won_img,(120,17))
-
+draw_img = pygame.image.load("./assests/images/draw.png")
+draw_img = pygame.transform.scale(draw_img, (120, 17))
 
 def drawBoard():
 	# drawing lines
@@ -34,6 +35,9 @@ def drawMessage(img):
 		screen.blit(white_won_img,(15,68))
 	elif img == -1:
 		screen.blit(black_won_img,(15,68))
+	elif img == 0.5:
+		screen.blit(draw_img,(15, 68))
+
 
 def screnUpdate(x,y,img):
 	x= (x+5)+(x*50)

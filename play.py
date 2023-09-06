@@ -30,9 +30,9 @@ def tictactoeAlgorithm(coordinate,state,player):
             if value == 1:
                 print(player, "won")
                 result_t = 1
-                
             else:
                 print("draw")
+                result_t = 0.5
         player = tictactoe.get_opponent(player)
     print(state)    
     return player,result_t
@@ -55,5 +55,14 @@ while running:
             state = tictactoe.get_initial_state()
             gui.drawBoard()
             result = 0
+        if result == 0.5:
+            print("0.5")
+            gui.drawMessage(result)
+            pygame.display.update()
+            sleep(3)
+            state = tictactoe.get_initial_state()
+            gui.drawBoard()
+            result = 0
+
     pygame.display.update()
 
